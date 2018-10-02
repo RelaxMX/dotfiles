@@ -26,6 +26,8 @@ reload_dunst() {
         -e "s/frame_color = \"#.*\"/frame_color = \"${color0:-#788388}\"/" \
         "${HOME}/.config/dunst/dunstrc"
 
+         killall dunst;notify-send foo
+
 }
 
 main() {
