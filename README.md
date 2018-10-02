@@ -10,6 +10,7 @@
 - [dunst](#dunst)
 - [dmenu](#dmenu)
 - [rofi](#rofi)
+- [vim](#vim)
 
 <a name="#i3"></a>
 # i3
@@ -168,3 +169,36 @@ rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
 # Light theme.
 rofi.theme: ~/.cache/wal/colors-rofi-light.rasi
 ```
+
+
+<a name="#vim"></a>
+# vim
+
+### Install vim-plug
+
+```sh
+$ yay vim-plug
+```
+
+### Edit ~/.vimrc
+
+```
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
+colo desert
+syntax on
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'dylanaraps/wal.vim'
+
+call plug#end()
+
+```
+
+Open vim and run `:PlugInstall`
+
+
+
