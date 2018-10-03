@@ -10,11 +10,11 @@
 reload_conky() {
         sed -i"" --follow-symlinks \
         -e "s/color2 = '.*'/color2 = '${color15:-#263238}'/" \
-        "/home/rod/.config/conky/conky1.10_shortcuts_maia"
+        "${HOME}/.config/conky/conky1.10_shortcuts_maia"
 
         sed -i"" --follow-symlinks \
         -e "s/color2 = '.*'/color2 = '${color15:-#263238}'/" \
-        "/home/rod/.config/conky/conky_maia"
+        "${HOME}/.config/conky/conky_maia"
 
 
 }
@@ -26,7 +26,7 @@ reload_dunst() {
         -e "s/frame_color = \"#.*\"/frame_color = \"${color0:-#788388}\"/" \
         "${HOME}/.config/dunst/dunstrc"
 
-         killall dunst;notify-send foo
+         killall dunst;notify-send "dunst re-started"
 
 }
 
