@@ -356,8 +356,8 @@ bar {
 #                      border  backgr. text
         focused_workspace  $color15 $color6 $bg
         active_workspace   $color8 $color8 $fg
-        inactive_workspace $color8 $color8 $fg
-        binding_mode       $color6 $color8 $fg
+        inactive_workspace $color8 $bg $fg
+        binding_mode       $color8 $color6 $fg
         urgent_workspace   $color6 $bg $fg 
     }
 }
