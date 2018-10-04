@@ -26,11 +26,25 @@ reload_dunst() {
         -e "s/frame_color = \"#.*\"/frame_color = \"${color0:-#788388}\"/" \
         "${HOME}/.config/dunst/dunstrc"
 
-         killall dunst;notify-send "dunst re-started"
+         killall dunst;notify-send "Theme Changed!"
 
 }
 
+reload_wallpaper() {
+	cp ${wallpaper} /usr/share/backgrounds/login.jpg
+}
+
+reload_dmenu() {
+	sed -i"" --follow-symlinks \
+        -e "s/DMENU_NB=\".*\"/DMENU_NB=\"${color0}\"/" \
+        -e "s/DMENU_NF=\".*\"/DMENU_NF=\"${color2}\"/" \
+        -e "s/DMENU_SB=\".*\"/DMENU_SB=\"${color14}\"/" \
+        "${HOME}/.dmenurc"
+}
+
 main() {
+    reload_dmenu &
+    reload_wallpaper &
     reload_dunst &
     reload_conky &
    # xrdb -merge ~/.cache/wal/rofi.xres &
@@ -38,4 +52,3 @@ main() {
 }
 
 main
-

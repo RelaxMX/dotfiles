@@ -4,6 +4,13 @@
 
 
 
+
+## Requisitos
+
+
+
+
+
 - [i3](#i3)
 - [polybar](#polybar)
 - [python-wal](#pywal)
@@ -11,6 +18,14 @@
 - [dmenu](#dmenu)
 - [rofi](#rofi)
 - [vim](#vim)
+
+
+
+
+
+
+
+
 
 <a name="#i3"></a>
 # i3
