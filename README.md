@@ -28,7 +28,14 @@ $ yay -S  nerd-fonts-complete
 URxvt.font: xft:DejaVu Sans Mono:pixelsize=11
 ```
 
+### Copy Files
 
+```sh
+$ cp .config/conky ~/.config/
+$ sudo cp usr/bin/* /usr/bin/
+$ sudo touch /usr/share/backgrounds/login.jpg
+$ sudo sudo chmod 777 /usr/share/backgrounds/login.jpg
+```
 
 
 
