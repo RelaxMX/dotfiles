@@ -7,6 +7,27 @@
 
 ## Requisitos
 
+### yay AUR Helper
+
+```sh
+$ git clone https://aur.archlinux.org/yay.git
+$ cd yay
+$ makepkg -si
+```
+
+### Nerd Fonts
+
+```sh
+$ yay -S  nerd-fonts-complete
+```
+
+### .Xresources
+
+```
+#URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono
+URxvt.font: xft:DejaVu Sans Mono:pixelsize=11
+```
+
 
 
 
