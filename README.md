@@ -66,7 +66,14 @@ cat ~/.cache/wal/sequences
 source ~/.cache/wal/colors-tty.sh%    
 ```
 
+# LightDM
 
+`/etc/lightdm/slick-greeter.conf`
+
+```
+[Greeter]
+background=/usr/share/backgrounds/login.jpg
+```
 
 
 - [i3](#i3)
