@@ -37,6 +37,19 @@ $ sudo touch /usr/share/backgrounds/login.jpg
 $ sudo sudo chmod 777 /usr/share/backgrounds/login.jpg
 ```
 
+### Edit Pacman
+
+```sh
+$ sudo nano /etc/pacman.conf
+```
+
+```
+# Misc options
+Color
+ILoveCandy
+```
+
+
 
 
 - [i3](#i3)
