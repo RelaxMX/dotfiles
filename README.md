@@ -86,12 +86,6 @@ background=/usr/share/backgrounds/login.jpg
 
 
 
-
-
-
-
-
-
 <a name="#i3"></a>
 # i3
 Config file `~/.i3/config` edit:
@@ -279,6 +273,3 @@ call plug#end()
 ```
 
 Open vim and run `:PlugInstall`
-
-
-
