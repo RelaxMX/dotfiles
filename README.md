@@ -31,10 +31,17 @@ URxvt.font: xft:DejaVu Sans Mono:pixelsize=11
 ### Copy Files
 
 ```sh
-$ cp .config/conky ~/.config/
+$ cp -r .config/conky ~/.config/
 $ sudo cp usr/bin/* /usr/bin/
 $ sudo touch /usr/share/backgrounds/login.jpg
-$ sudo sudo chmod 777 /usr/share/backgrounds/login.jpg
+$ sudo chmod 777 /usr/share/backgrounds/login.jpg
+```
+
+## Install Software
+
+```sh
+$ yay -S python-pywal
+$ yay -S feh
 ```
 
 ### Edit Pacman
