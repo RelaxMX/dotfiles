@@ -119,6 +119,22 @@ client.background       $bg
 bindsym $mod+d exec dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
 ```
 
+```sh
+ colors {
+        background $bg
+        statusline $color15
+        separator  $color8
+
+#                      border  backgr. text
+        focused_workspace  $color15 $color6 $bg
+        active_workspace   $color8 $color8 $fg
+        inactive_workspace $color8 $bg $fg
+        binding_mode       $color8 $color6 $bg
+        urgent_workspace   $color6 $bg $fg
+    }
+
+```
+
 
 <a name="#polybar"></a>
 # polybar
