@@ -36,9 +36,4 @@ i3lock -m \
 --datestr="%A, %m %Y" \
 --keylayout 2         \
 --veriftext="Verificando" \
---wrongtext="Denegado" \
-
-
-
-i3lock -u 
-#xset dpms force off
+--wrongtext="Denegado" 
