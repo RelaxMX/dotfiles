@@ -22,16 +22,27 @@ reload_conky() {
 reload_dunst() {
         sed -i"" --follow-symlinks \
         -e "s/background = \"#.*\"/background = \"${color0:-#263238}\"/" \
-        -e "s/foreground = \"#.*\"/foreground = \"${color15:-#556064}\"/" \
-        -e "s/frame_color = \"#.*\"/frame_color = \"${color0:-#788388}\"/" \
+        -e "s/foreground = \"#.*\"/foreground = \"${color2:-#556064}\"/" \
+        -e "s/frame_color = \"#.*\"/frame_color = \"${color14:-#788388}\"/" \
         "${HOME}/.config/dunst/dunstrc"
 
          killall dunst;notify-send "Theme Changed!"
 
 }
 
+
+reload_glava() { 
+        sed -i"" --follow-symlinks \
+        -e "s/BAR_OUTLINE .*/BAR_OUTLINE ${color2}/g" \
+        -e "s/COLOR (.*/COLOR (${color2} * GRADIENT * ALPHA)/g" \
+        "${HOME}/.config/glava/bars.glsl"
+        killall glava; glava --desktop
+}
+
+
 reload_wallpaper() {
-	cp ${wallpaper} /usr/share/backgrounds/login.jpg
+        convert ${wallpaper} -blur 0x8  /usr/share/backgrounds/login.jpg
+	#cp ${wallpaper} /usr/share/backgrounds/login.jpg
 }
 
 reload_dmenu() {
@@ -42,11 +53,39 @@ reload_dmenu() {
         "${HOME}/.dmenurc"
 }
 
+reload_ilock() {
+    sed -i"" --follow-symlinks \
+        -e "s/C='.*'/C='${color2}22'/" \
+        -e "s/D='.*'/D='${color2}cc'/" \
+        -e "s/T='.*'/T='${color2}ee'/" \
+        -e "s/W='.*'/W='${color0}bb'/" \
+        -e "s/V='.*'/V='${color0}bb'/" \
+        "${HOME}/.i3/ilock.sh"
+}
+
+## B='#00000000'  # blank
+# C='#ffffff22'  # clear ish
+# D='#ff00ffcc'  # default
+# T='#ee00eeee'  # text
+# W='#880000bb'  # wrong
+# V='#bb00bbbb'  # verifying
+#
+
 main() {
     reload_dmenu &
+    if [ -e ${HOME}/.config/glava/bars.glsl ]
+    then
+       reload_glava &
+    fi
+    if [ -e ${HOME}/.i3/ilock.sh ]
+    then
+       reload_ilock  &
+    fi
+
     reload_wallpaper &
     reload_dunst &
     reload_conky &
+    
    # xrdb -merge ~/.cache/wal/rofi.xres &
    # wal-discord; beautifuldiscord --css "${HOME}/.cache/wal-discord/style.css"
 }

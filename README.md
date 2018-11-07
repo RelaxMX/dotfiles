@@ -21,6 +21,18 @@ $ makepkg -si
 $ yay -S  nerd-fonts-complete
 ```
 
+### i3lock-color
+
+```sh
+$ yay -S i3lock-color-git
+```
+
+### Glava
+
+```sh
+$ yay -S glava
+```
+
 ### .Xresources
 
 ```
