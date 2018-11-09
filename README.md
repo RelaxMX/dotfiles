@@ -2,9 +2,6 @@
 
 `dotfiles` es mi colección personal de archivos de configuración para algunas de las aplicaciones que uso en i3 Manjaro Linux
 
-
-
-
 ## Requisitos
 
 ### yay AUR Helper
