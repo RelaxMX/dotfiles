@@ -178,7 +178,6 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 ```
 
-
 <a name="#pywal"></a>
 # python-wal
 
